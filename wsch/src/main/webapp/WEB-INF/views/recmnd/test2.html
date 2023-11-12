@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'G마켓 산스';
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: url("./img/bg.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .bg {
+            background: rgba(255, 255, 255, 0.6);
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        #question,
+        #answer {
+            width: 90%;
+            margin: 5% auto 0;
+        }
+
+        #answer_in {
+            width: 100%;
+        }
+
+        #button {
+            width: 250px;
+            height: 50px;
+            font-size: 2rem;
+            background-color: aqua;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #img {
+            width: 50%;
+            height: 50%;
+
+        }
+    </style>
+    <script src="./js/question_answer.js"></script>
+</head>
+
+<body style="text-align: center">
+    <div class="bg">
+        <div class="title">
+            <h1>추천기능 구현하기</h1>
+            <p>질문 3개를 던지고 그에 맞는 결과를 출력
+            <p>
+            </div>
+        <main>
+            <div class="wrap" style="text-align: center;">
+                <div style="width:100%;max-width:1080px;margin:0 auto;text-align:center;">
+                    <div id="question" name="q1" style="font-size: 30px;">
+                        1번 질문 : 어느정도 단맛을 원하시나요?
+                    </div>
+                    <div id="answer">
+                        <input id="answer_in" type="range" value="1" min="1" max="5" list="tickmarks" />
+                        <datalist id="tickmarks">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </datalist>       
+                    </div>
+                    <img src="./img/liquor.png" id="img" style="padding: 20px;">
+                    <div id="result">
+
+                    </div>
+                    <input type="button" id="button" value="다음 질문" />
+                    <p style="font-size:15px">※ 지나친 음주는 뇌졸중, 기억력 손상이나 치매를 유발합니다.<br>임신 중 음주는 기형아 출생 위험을 높입니다.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>

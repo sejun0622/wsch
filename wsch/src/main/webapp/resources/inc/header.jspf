@@ -1,0 +1,47 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+header {
+  height: 75px;
+  padding: 1rem;
+  color: white;
+  background: teal;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+</style>
+</head>
+<body>
+<!--  페이지 상단 -->
+<header>
+	<div><a href="/wsch/">홈 로고자리</a></div>
+	<nav class="topMenu">
+		<ul>
+			<c:if test="${logStatus =='' || logStatus !='Y' }"> <!-- 비로그인 -->
+				<li><a href="">테스트1</a></li>
+				<li><a href="">테스트2</a></li>
+			</c:if>
+			<c:if test="${logStatus !='' && logStatus =='Y' }"> <!-- 로그인 -->
+				<li><a href="">테스트1</a></li>
+				<li><a href="">테스트2</a></li>
+			</c:if>
+				<li><a href="">테스트</a></li>
+				<li><a href="">테스트</a></li>
+			
+		</ul>
+	</nav>
+</header>
+
+
+
